@@ -16,7 +16,7 @@ checkpoint = torch.load('outputs/best_model.pth', map_location=DEVICE)
 model.load_state_dict(checkpoint['model_state_dict'])
 model.to(DEVICE).eval()
 # directory where all the images are present
-DIR_TEST = 'C:/kaggle/drone/test'
+DIR_TEST = 'dataset/test'
 test_images = glob.glob(f"{DIR_TEST}/*.jpg")
 print(f"Test instances: {len(test_images)}")
 # define the detection threshold...

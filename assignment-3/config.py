@@ -5,9 +5,9 @@ NUM_EPOCHS = 10 # number of epochs to train for
 NUM_WORKERS = 4
 DEVICE = torch.device('cuda') if torch.cuda.is_available() else torch.device('cpu')
 # training images and XML files directory
-TRAIN_DIR = 'C:/kaggle/drone/train'
+TRAIN_DIR = 'dataset/train'
 # validation images and XML files directory
-VALID_DIR = 'C:/kaggle/drone/valid'
+VALID_DIR = 'dataset/valid'
 # classes: 0 index is reserved for background
 CLASSES = [
     '__background__', 'drone'
