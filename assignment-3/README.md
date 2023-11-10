@@ -30,9 +30,14 @@ train.py will be run to start training the model. The output includes best model
 
 detect.py will be run to detect the drones from the frames collected in part 1. The outputs is saved in detections directory.
 
+## Training Loss Plot
+![](https://github.com/Jasonchen0317/CSGY-6613-Assignment/blob/main/assignment-3/readme_img/train_loss.png)
+
+## Validation Loss Plot
+![](https://github.com/Jasonchen0317/CSGY-6613-Assignment/blob/main/assignment-3/readme_img/valid_loss.png)
 
 ## Some captured frames in video 1
-![](https://github.com/Jasonchen0317/CSGY-6613-Assignment/blob/main/assignment-3/GIF/Video_0.gif)
+![](https://github.com/Jasonchen0317/CSGY-6613-Assignment/blob/main/assignment-3/readme_img/Video_0.gif)
 
 ## Some captured frames in video 2
-![](https://github.com/Jasonchen0317/CSGY-6613-Assignment/blob/main/assignment-3/GIF/Video_1.gif)
+![](https://github.com/Jasonchen0317/CSGY-6613-Assignment/blob/main/assignment-3/readme_img/Video_1.gif)
