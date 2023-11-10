@@ -8,16 +8,27 @@ Training and Validation Dataset: https://www.kaggle.com/datasets/dasmehdixtr/dro
 
 Directory:
 .
+
 ├── assignment-3.ipynb
+
 ├── config.py
+
 ├── custom_utils.py
+
 ├── datasets.py
+
 ├── detect.py
+
 ├── model.py
+
 ├── train.py
+
 └── dataset/
+
     ├── train
+
     ├── valid
+    
     └── test
 
 ## Approach
@@ -30,10 +41,15 @@ This part is all included in assignment-3.ipynb.
 #### Part 2: Drone Object Detection
 
 The other python files are for drone detection. 
+
 config.py includes the configurations such as dataset path, hyperparameters for the model, classes, etc. 
+
 custom_utils.py includes functions for saving trained models, save plots, transforming images, etc. 
+
 datasets.py is used is for converting raw datas to dataset that will be fed to the model. 
+
 model.py builds the model for this task, which is the fasterrcnn_resnet50_fpn from torch. train.py will be run to start training the model. The output includes best model and loss plots. 
+
 detect.py will be run to detect the drones from the frames collected in part 1. The outputs is saved in detections directory.
 
 
