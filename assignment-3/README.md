@@ -1,11 +1,6 @@
 # Task 1: Drone Object Detection
 
-## Environment
-
-Downloading videos: https://github.com/pytube/pytube
-
-Training and Validation Dataset: https://www.kaggle.com/datasets/dasmehdixtr/drone-dataset-uav
-
+This task is about detecting frames from the videos that includes the drone and finding the drone's bounding box.
 
 ## Approach
 
@@ -16,13 +11,15 @@ This part is all included in assignment-3.ipynb.
 
 #### Part 2: Drone Object Detection
 
-The other python files are for drone detection. 
+Training and Validation Dataset: https://www.kaggle.com/datasets/dasmehdixtr/drone-dataset-uav , I picked about 500 images for training, and about 100 images for validating.
 
-config.py includes the configurations such as dataset path, hyperparameters for the model, classes, etc. 
+The other python files are for drone detection: 
 
-custom_utils.py includes functions for saving trained models, save plots, transforming images, etc. 
+config.py includes the configurations such as dataset paths, hyperparameters for the model, classes, etc. 
 
-datasets.py is used is for converting raw datas to dataset that will be fed to the model. 
+custom_utils.py includes functions for saving trained models, saving plots, transforming images, etc. 
+
+datasets.py is used is for converting raw datas to datasets that fits the input of the model. 
 
 model.py builds the model for this task, which is the fasterrcnn_resnet50_fpn from torch. 
 
