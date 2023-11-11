@@ -25,7 +25,7 @@ model.py builds the model for this task, which is the fasterrcnn_resnet50_fpn mo
 
 train.py will be run to start training the model. The output includes best model and loss plots. 
 
-detect.py will be run to detect the drones from the frames collected in part 1 using the trained model. The outputs is saved in detections directory.
+detect.py will be run to detect the drones from the frames collected in part 1 using the trained model. The outputs will be saved in the 'detections' directory.
 
 ## Training Loss Plot
 ![](https://github.com/Jasonchen0317/CSGY-6613-Assignment/blob/main/assignment-3/readme_img/train_loss.png)
