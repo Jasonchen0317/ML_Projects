@@ -21,7 +21,7 @@ custom_utils.py includes functions for saving trained models, saving plots, tran
 
 datasets.py is used is for converting raw datas to datasets that fits the input of the model. 
 
-model.py builds the model for this task, which is the fasterrcnn_resnet50_fpn from torch. 
+model.py builds the model for this task, which is the fasterrcnn_resnet50_fpn model from torchvision. 
 
 train.py will be run to start training the model. The output includes best model and loss plots. 
 
