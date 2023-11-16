@@ -38,3 +38,27 @@ detect.py will be run to detect the drones from the frames collected in part 1 u
 
 ## Some captured frames in video 2
 ![](https://github.com/Jasonchen0317/CSGY-6613-Assignment/blob/main/assignment-3/readme_img/Video_1.gif)
+
+
+# Task 2: Kalman Filter 
+
+This task aim to implement a Kalman filter that will track the drone in the video.
+
+## Approach
+
+Most part of task 2 is based on detect.py from task 1, since the output of the detection model will be used as the measurement for the kalman filter. 
+
+#### Kalman filter instance variable
+
+1. Filter state estimate(x) is composed by coordinates of the center of the bounding box (cx,cy), size of the box (width, height) and the change of each of these parameters, velocities.
+
+2. Covariance matrix(P) is set to I*10 (np.eye(8) * 10.).
+
+3. Process uncertainty/noise(Q) is set to I*0.01 (np.eye(8) * 0.01).
+
+4. Measurement uncertainty/noise(R) is set 1 for center point, 10 for width and height.
+
+#### Steps
+
+First, the bounding box is found by the Faster-RCNN model, then is converted into the format of the measurement for the filter. The filter first predicts and then uses the measurement to update the resulting bounding box. 
+For small amount(<20) of consecutive frames that has no detection, I've used the kalman filter to predict the bounding boxes, since it maybe false negative(miss detection). If the amount of consecutive frames that has no detection is over the threshold, the saved detected frames will be output as videos. 
