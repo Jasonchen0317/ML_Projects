@@ -62,3 +62,7 @@ Most part of task 2 is based on detect.py from task 1, since the output of the d
 
 First, the bounding box is found by the Faster-RCNN model, then is converted into the format of the measurement for the filter. The filter first predicts and then uses the measurement to update the resulting bounding box. 
 For small amount(<20) of consecutive frames that has no detection, I've used the kalman filter to predict the bounding boxes, since it maybe false negative(miss detection). If the amount of consecutive frames that has no detection is over the threshold, the saved detected frames will be output as videos. 
+
+#### Results
+
+The resulting videos are saved in the 'kalman_filter_vid' folder
