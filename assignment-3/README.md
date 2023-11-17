@@ -60,7 +60,7 @@ Most part of task 2 is based on detect.py from task 1, since the output of the d
 
 #### Steps
 
-First, the bounding boxes are found by the Faster-RCNN model, next the max confidence bbox is used as measurement, it is converted into the format of the measurement for the filter. The filter first predicts with previous measurements and then uses the new measurement to update the resulting bounding box. 
+First, the bounding boxes are found by the trained Faster-RCNN model from task 1. Next, the max confidence bounding box is used as measurement, it is converted into the format of the measurement for the filter. The filter first predicts with previous measurements and then uses the new measurement to update the resulting bounding box. 
 For small amount(less than 20) of consecutive frames that has no detection, I've used the kalman filter to predict the bounding boxes, since it maybe false negative(miss detection). If the amount of consecutive frames that has no detection is over the threshold(over 20), the saved detected frames will be output as videos.
 
 There is a problem where the model sometimes identifies some 'drone' shaped clouds as an actual drone(false positive). This may confuse the kalman filter by taking the wrong measurement(cloud instead of the real drone). 
