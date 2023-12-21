@@ -1,7 +1,9 @@
 # Take at home problem: Variational Autoencoders 
 The Main part of the code(including models, optimizing, training, testing, plotting, code explanation) are in take_at_home.ipynb. 
-data.py are for downloading and processing dataset. 
-VAE generated images for all digits 0-9 are in 'numbers' directory, final latent variable plot and loss plot are in 'plot' directory.
+
+Other files: 1. data.py are for downloading and processing dataset. 2. flow.py contains Inverse Autoregressive Flows, Masked Autoencoder, etc.  3. masks.py includes utility functions for masked autoencoder.
+
+Results: VAE generated images for all digits 0-9 are in 'numbers' directory, final latent variable plot and loss plot are in 'plot' directory.
 
 ## Results
 
