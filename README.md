@@ -1,1 +1,1 @@
-# CSGY-6613-Assignment
+# CSGY-6613 ML Projects
